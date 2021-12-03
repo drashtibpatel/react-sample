@@ -42,15 +42,16 @@ jobs:
           branch: gh-pages
           folder: build
 
-      - name: Server setup
-      	uses: appleboy/ssh-action@v0.1.4
-	with:
-	  host: 192.168.2.230
-          port: 22
-	  username: ubuntu
-	  key: ${{ secret.PRIVATE_KEY }}
-	  script: |
-	    cd /var/www/html/react-sample/
-	    git pull origin gh-pages
-	    git status
-	
+      - name: SSH Setup
+				uses: appleboy/ssh-action@v0.1.4
+				with:
+					# SSH hosts
+					host: 192.168.2.230
+					port: 22
+					username: ubuntu
+					# SSH private key
+					key: ${{ secret.PRIVATE_KEY }}
+						cd /var/www/html/sample-react/
+						git pull origin gh-pages
+						git status
+				
