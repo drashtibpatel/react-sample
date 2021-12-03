@@ -44,13 +44,13 @@ jobs:
 
       - name: Server setup
       	uses: appleboy/ssh-action@v0.1.4
-	with:
-	  host: 192.168.2.230
-	  port: 22
-	  username: ubuntu
-	  key: ${{ secret.PRIVATE_KEY }}
-	  script: |
-	    cd /var/www/html/react-sample/
-	    git pull origin gh-pages
-            git status
+		with:
+		  host: 192.168.2.230
+		  port: 22
+		  username: ubuntu
+		  key: ${{ secret.PRIVATE_KEY }}
+		  script: |
+		  cd /var/www/html/react-sample/
+		  git pull origin gh-pages
+		  git status
 	
