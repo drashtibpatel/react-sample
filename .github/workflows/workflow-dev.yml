@@ -33,6 +33,5 @@ jobs:
           key: ${{ secrets.DOY_PRIVATE_KEY }}
           script: |
             cd /var/www/html/react-test-app/react-sample/
-            git pull origin gh-pages
             git status
 
