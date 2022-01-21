@@ -27,12 +27,12 @@ jobs:
       - name: Server setup
         uses: appleboy/ssh-action@v0.1.4
         with:
-          host: 192.168.2.230
+          host: 74.208.26.245
           port: 22
-          username: ubuntu
-          key: ${{ secrets.PRIVATE_KEY }}
+          username: root
+          key: ${{ secrets.DOY_PRIVATE_KEY }}
           script: |
-            cd /var/www/html/react-sample/
+            cd /var/www/html/react-test-app/react-sample/
             git pull origin gh-pages
             git status
 
