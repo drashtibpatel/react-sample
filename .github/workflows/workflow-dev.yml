@@ -27,12 +27,12 @@ jobs:
       - name: Server setup
         uses: appleboy/ssh-action@v0.1.4
         with:
-          host: 74.208.26.245
+          host: hahewoto.ssh.cloud.hostpoint.ch
           port: 22
-          username: root
-          key: ${{ secrets.DOY_PRIVATE_KEY }}
+          username: hahewoto
+          key: ${{ secrets.BF_PRIVATE_KEY }}
           script: |
-            cd /var/www/html/react-test-app/react-sample/
+            cd /www/react-test/
             git pull origin gh-pages
             git status
 
