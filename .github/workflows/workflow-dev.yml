@@ -32,7 +32,7 @@ jobs:
           username: hahewoto
           key: ${{ secrets.BF_PRIVATE_KEY }}
           script: |
-            cd /www/react-test/
+            cd ~/www/react-test/react-sample/
             git pull origin gh-pages
             git status
 
